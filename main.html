@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MY NOTES</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mstyle.css">
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="icon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,300,100,600,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <header class="head">
+        <h1>CONTENTS</h1>
+    </header>
+
+    <!--Table of Contents-->
+    <div id="contents">
+        <h3><a href="#l-1">Lesson-1:</a><b> Structures, Webpages and Documents</b></h3>
+        <ol>
+            <li>
+                <a href="#l-1-1">HTML and Web Basics</a>
+                <ul class="subcontents">
+                    <li><a href="#description-1">How the Web Works</a></li>
+                    <li><a href="#description-2">HTML</a></li>
+                    <li><a href="#description-3">Whitespace</a></li>
+                    <li><a href="#description-4">Some HTML Tags and Attributes</a></li>
+                    <li><a href="#description-5">Inline Elements Vs Block Elements</a></li>
+                    <li><a href="#description-6">Tags and Elements</a></li>
+                    <li><a href="#description-7">Why Computers are Stupid</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#l-1-2">Creating Structured HTML Documents</a>
+                <ul class="subcontents">
+                    <li><a href="#description-8">Tree-like Structure of an HTML Document</a></li>
+                    <li><a href="#description-9">Boxifying Design</a></li>
+                    <li><a href="#description-10">Repitition and Why to Avoid It</a></li>
+                    <li><a href="#description-11">Tools Required</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#l-1-3">Styling the HTML Structure</a>
+                <ul class="subcontents">
+                    <li><a href="#description-12">What Is CSS</a></li>
+                    <li><a href="#description-13">Adding CSS to Your Webpage</a></li>
+                    <li><a href="#description-14">Box-Sizing</a></li>
+                    <li><a href="#description-15">Box-Positioning</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <!--Contents-->
+    <header class="head" id="l-1">
+        <h1>LESSON 1: STRUCTURES, WEBPAGES AND DOCUMENTS</h1>
+    </header>
+    <hr>
+
+    <!--Lesson-1-1-->
+    <article id="l-1-1">
+        <h2>HTML AND WEB BASICS</h2>
+
+        <!--Lesson-1-1-Topic-1-->
+        <div class="block" id="description-1">
+            <h3><b>How the Web Works</b></h3> The web is fundamentally <em>a group of computers communicating with each other</em>. Whenever a person opens a web page, the computer sends an <b>HTTP</b> request to a <b>server</b>, which then finds the required HTML document and sends
+            it back to the user's computer. Upon the completion of this action, the web browser that the user is using, interprets the web page and displays it on the screen of the output device that the user is using, whether it be a phone or a computer.<br>            For a better understanding of the above concept, click
+            <a href="https://www.udacity.com/course/viewer/#!/c-ud000/l-4185478836/e-48329854/m-48480496">here</a>
+
+            <img src="images/www.jpg" class="img-responsive" alt="World Wide Web">
+        </div>
+
+        <!--Lesson-1-1-Topic-2-->
+        <div class="block" id="description-2">
+            <h3><b>HTML</b></h3>
+            <ul>
+                <li>HTML stands for <b><em>HyperText Markup Language</em></b>.</li>
+                <li>
+                    The majority content of the web is formed of HTML documents, which contain <b>text elements</b> that form what you see, and <b>markup elements</b>, that shape up how the page looks.
+                </li>
+                <li>
+                    Consult <a href="https://www.udacity.com/course/viewer/#!/c-ud000/l-4185478836/m-48724340">this</a> video for a better overview.
+                </li>
+            </ul>
+            <img src="images/image-1.png" class="img-responsive" alt="html">
+        </div>
+
+        <!--Lesson-1-1-Topic-3-->
+        <div class="block" id="description-3">
+            <h3><b>Whitespace</b></h3> HTML converts all the white space in a single document into a single space. So, several tags exist to carry out the task of making a new line or paragraph.
+            <ul>
+                <li>
+                    <code>&lt;br&gt;</code> tag is used to create a new line. It's a void tag and thus doesn't require a closing tag. It is an inline element.
+                </li>
+                <li>
+                    <code>&lt;p&gt;</code> tag is used to create a new paragraph. It is a block element and requires a closing tag.
+                </li>
+                <li>
+                    <code>&lt;span&gt;</code> is an inline element used to create a new line of text.
+                </li>
+            </ul>
+        </div>
+
+        <!--Lesson-1-1-Topic-4-->
+        <div class="block" id="description-4">
+            <h3><b>Some HTML Tags and Attributes</b></h3>
+            <ul>
+                <li>Tag Attribute: <code>&lt;tag attribute="value"&gt; contents &lt;tag&gt;</code></li>
+                <li>
+                    Anchor tag: Used to create a link
+                    <code>&lt;a href="http://udacity.com"&gt; My Favorite Website &lt;a&gt;</code>
+                    <br> Anchor tag creates a link such that the words "My Favorite Website" link to the Udacity homepage.
+                </li>
+                <li>
+                    Image tag: <code>&lt;img src="url of the image" alt="alternate text"&gt;</code>
+                </li>
+                <li>
+                    The img tag is a void tag. Also, it is a good practice to put alternate text along with the image.
+                </li>
+            </ul>
+            <img src="images/image-2.png" class="img-responsive" alt="tag">
+        </div>
+
+        <!--Lesson-1-1-Topic-5-->
+        <div class="block" id="description-5">
+            <h3><b>Inline Elements Vs Block Elements</b></h3>
+            <ul>
+                <li>HTML elements can be either of the two types: <b>inline</b> or <b>block</b>.</li>
+                <li>The block elements form an invisible 'block' around the content that they hold.</li>
+                <li>
+                    <em>&lt;span&gt;,&lt;b&gt;,&lt;img&gt;</em> etc. are examples of inline elements and
+                    <em>&lt;div&gt;,&lt;p&gt;</em> etc. are examples of block elements.
+                </li>
+            </ul>
+            <img src="images/image-3.png" class="img-responsive" alt="inline and block">
+        </div>
+
+        <!--Lesson-1-1-Topic-6-->
+        <div class="block" id="description-6">
+            <h3><b>Tags and Elements</b></h3>
+            <ul>
+                <li>Every HTML document comprises of <b>HTML elements</b>.</li>
+                <li>The type of each element is indicated to the browser by using different <b>HTML tags</b>.</li>
+                <li>
+                    Watch <a href="https://www.udacity.com/course/viewer/#!/c-ud000/l-4185478836/m-48723444">this</a> video for a better understanding of how an HTML document is constructed.
+                </li>
+            </ul>
+        </div>
+
+        <!--Lesson-1-1-Topic-7-->
+        <div class="block" id="description-7">
+            <h3><b>Why Computers are Stupid</b></h3> Computers are simply machines, and thus they <em>interpret every instruction literally</em>. This means that a small mistake made by a programmer, when implemented literally by the computer, can cause a great deal of trouble.
+
+            <img src="images/image-4.png" class="img-responsive" alt="stupid-computer">
+        </div>
+
+    </article>
+
+    <!--Lesson-1-2-->
+    <article id="l-1-2">
+        <h2>CREATING STRUCTURED HTML DOCUMENTS</h2>
+
+        <!--Lesson-1-2-Topic-1-->
+        <div class="block" id="description-8">
+            <h3><b>Tree-like Structure of an HTML Document</b></h3>
+            <ul>
+                <li>
+                    When the HTML elements are nested, they give a tree-like structure to the page, with one element being the parent element of several child elements.
+                    <br> Refer to the<a href="http://en.wikipedia.org/wiki/Tree_structure"> Wikipedia article on Tree Structure</a> for more details.
+                </li>
+                <li>The tree-like structure of a web page is also referred to as the DOM (Document Object Model).</li>
+                <li>CSS (Cascading Style Sheets) are used to apply different styles to the page.</li>
+                <li>
+                    CSS makes the code clean and more effiecient or optimized by allowing the user to reuse the same code for different places where the same style is applied.
+                </li>
+            </ul>
+            <img src="images/image-5.svg.png" class="img-responsive" alt="tree structure">
+        </div>
+
+        <!--Lesson-1-2-Topic-2-->
+        <div class="block" id="description-9">
+            <h3><b>Boxifying Design</b></h3>
+            <ul>
+                <li>The whole structure of any web page can be broken down into a number of boxes.</li>
+                <li>Different boxes will have different content and different class names to identify them.</li>
+                <li>In simpler words, each &lt;div&gt; element creates a new box.</li>
+            </ul>
+        </div>
+
+        <!--Lesson-1-2-Topic-3-->
+        <div class="block" id="description-10">
+            <h3><b>Repitition and Why to Avoid It</b></h3>
+            <ul>
+                <li>Repitition leads to errors. Less the repitition of code, lesser will be the errors.</li>
+                <li>Less repitition of code makes it consistent and easy to change if necessary.</li>
+            </ul>
+        </div>
+
+        <!--Lesson-1-2-Topic-4-->
+        <div class="block" id="description-11">
+            <h3><b>Tools Required</b></h3>
+            <ul>
+                <li>Test Editors like Sublime Text or Atom.</li>
+                <li>
+                    DevTools, or Developer tools. These are different in each browser and help the developer to make temporary changes to their code without changing it permanently.
+                </li>
+            </ul>
+            <img src="images/image-6.png" class="img-responsive" alt="text editor">
+        </div>
+
+    </article>
+
+    <!--Lesson-1-3-->
+    <article id="l-1-3">
+        <h2>STYLING THE HTML STRUCTURE</h2>
+
+        <!--Lesson-1-3-Topic-1-->
+        <div class="block" id="description-12">
+            <h3><b>What Is CSS</b></h3>
+            <ul>
+                <li>CSS stands for <b><em>Cascading Style Sheets</em></b>.</li>
+                <li>
+                    <pre>
+             <code class="code">
+               .quote {
+                   font-size: 55px;
+                   font-weight: 600;
+                  }
+             </code>
+           </pre>
+                </li>
+                <li>
+                    <code>.quote</code> is a selector, that defines to what particular elements of the page that particular style will apply to.
+                </li>
+                <li>
+                    The styles are written in the curly braces <code>{}</code>
+                </li>
+                <li>The <code>font-size: 55px</code> is a style rule.</li>
+                <li><code>font-size</code> is the attribute and <code>55 px</code> is its value.</li>
+                <li>
+                    Class selectors are written as <code>.class-name</code>.<br> ID selectors are written as <code>#id-name</code><br> Tag selectors are written as <code>tag-name</code>
+                </li>
+            </ul>
+            <img src="images/image-7.jpg" class="img-responsive" alt="css">
+        </div>
+
+        <!--Lesson-1-3-Topic-2-->
+        <div class="block" id="description-13">
+            <h3><b>Adding CSS to Your Webpage</b></h3> Following are the different ways to add CSS to your HTML document:
+            <ol>
+                <li>
+                    Write your CSS in the <code>&lt;head&gt;</code> of the HTML document. This method is good for small projects or testing.
+                </li>
+                <li>
+                    Link a separate CSS file in your HTML document. This is the most organized method and best for larger projects.
+                    <ol>
+                        <li>Write all of your structural HTML in one file (lets name it <code>main.html</code>).</li>
+                        <li>In a separate file (lets name it <code>main.css</code>), put all of your CSS styles.</li>
+                        <li>Add a <code>&lt;head&gt;</code> element to the top of your HTML document.</li>
+                        <li>
+                            Put a <code>&lt;link&gt;</code> tag inside the <code>&lt;head&gt;</code> element. Since <code>&lt;link&gt;</code> is a "void tag" you don't need to add a closing
+                            <code>&lt;/link&gt;</code>.
+                        </li>
+                        <li>Add the following attributes to your
+                            <code>&lt;link rel="stylesheet"  type="text/css"  href="main.css"&gt;</code>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    Write your CSS styles inline with your HTML document. This often results in a lot of unwanted and repeated code.
+                </li>
+
+            </ol>
+        </div>
+
+        <!--Lesson-1-3-Topic-3-->
+        <div class="block" id="description-14">
+            <h3><b>Box-Sizing</b></h3> The whole web-page is made up of a number of boxes. The boxes are governed by their margin, border, padding and content. There are 2 ways to size boxes:
+            <ol>
+                <li>Set sizes in terms of percentage of the screen as opposed to fixed pixels.</li>
+                <li>Set the <code>box-sizing</code> attribute to the value <code>border-box</code> for every box.</li>
+            </ol>
+        </div>
+
+        <!--Lesson-1-3-Topic-4-->
+        <div class="block" id="description-15">
+            <h3><b>Box-Positioning</b></h3>
+            <ul>
+                <li>Each <code>&lt;div&gt;</code> is a block element that takes up the entire width of the page.</li>
+                <li>Using the flex-box can help position the divs next to each other.</li>
+            </ul>
+            <img src="images/image-8.svg" class="img-responsive" alt="boxes">
+        </div>
+    </article>
+
+</body>
+
+</html>
